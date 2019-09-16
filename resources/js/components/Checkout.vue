@@ -36,7 +36,8 @@
         setCreditToken: function(token) {
             axios.defaults.headers["X-CSRF-TOKEN"] = $("meta[name=csrf-token]").attr("content");
             axios.defaults.headers["content-type"] = "application/json";
-            axios.post("/api/users/set_token", { user: { token: token } }).then(
+            // axios.post("/api/users/set_token", { user: { token: token } }).then(
+            axios.post("/api/users/set_token", { token: token }).then(
                 response => {
                     console.log(response);
                     alert("Success!");
