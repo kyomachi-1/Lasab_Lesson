@@ -17,7 +17,9 @@
 
 Route::get('/', 'WebController@index');
 
-Route::get('/checkout', 'WebController@checkout')->middleware('auth');
+Route::get('/checkout', 'WebController@checkout')->middleware('auth')->name('checkout');
+
+Route::get('/subscription', 'WebController@subscription')->middleware('auth')->name('subscription');
 
 Auth::routes();
 
