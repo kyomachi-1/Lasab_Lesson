@@ -17,6 +17,8 @@
 
 Route::get('/', 'WebController@index');
 
+Route::get('/checkout', 'WebController@checkout');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
