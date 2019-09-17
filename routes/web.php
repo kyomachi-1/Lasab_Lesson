@@ -21,7 +21,9 @@ Route::get('/checkout', 'WebController@checkout')->middleware('auth')->name('che
 
 Route::get('/subscription', 'WebController@subscription')->middleware('auth')->name('subscription');
 
-Route::post('api/users/set_token', 'WebController@set_token')->middleware('auth');
+Route::post('/api/users/set_token', 'WebController@set_token')->middleware('auth');
+
+Route::post('/api/users/subscription', 'WebController@set_subscription')->middleware('auth');
 
 Auth::routes();
 
